@@ -20,7 +20,23 @@
   <link href='https://www.google-analytics.com' rel='preconnect'>
   <link href='https://www.googleadservices.com' rel='preconnect'>
   <link href='https://www.googletagmanager.com' rel='preconnect'>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+	<script src="https://icommerce.mybluemix.net/chatwidget.bundle.js"></script>
+	<style>
+		header.wgt-header {
+			position: initial;
+		}
+
+		#virtual-assistant {
+			border: solid 1px black;
+			padding: 10px;
+			font-weight: bold;
+			position: fixed;
+			bottom: 10px;
+			right: 10px;
+		}
+	</style>
   {script}
   {placeholder_head_end}
 </head>
@@ -50,6 +66,12 @@
     window.__APP_STATE__ = {app_state};
   </script>
 
-  {placeholder_body_end}
+	{placeholder_body_end}
+	<div id="virtual-assistant">
+		Click me!
+	</div>
+	<script>
+		$('#virtual-assistant').chatwidgetswitch()
+	</script>
 </body>
 </html>
